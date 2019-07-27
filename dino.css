@@ -1,0 +1,205 @@
+﻿body
+{
+}
+.main {
+    border: 2px solid black;
+    width: 350px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background: red;*/
+}
+.navigation {
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 10%;
+    /* position: absolute;
+    top: 2%; */
+}
+/* #top {
+    float: left;
+    clear: left;
+}
+#set {
+    float: right;
+    clear: right;
+}
+.navigation-menu {
+    display: none;
+}
+.navigation-settings {
+    display: none;
+} */
+.letter {
+    /* border: 2px solid orange; */
+    width: 45%;
+    height: 20%;
+    font-family: Aharoni;
+    font-size: 100px;
+    color: var(--primary);
+    position: relative;
+    /* top: 10%; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    cursor: grab;
+}
+.letter-up {
+    width: 48%;
+    float: left;
+    animation: waving2 3 700ms alternate 1.5s;
+    -webkit-animation: waving2 3 700ms alternate 1.5s;
+}
+.letter:hover > .letter-up {
+    animation: waving infinite 700ms alternate;
+    -webkit-animation: waving infinite 700ms alternate;
+}
+.letter-low {
+    animation: waving2 3 700ms alternate-reverse 1.5s;
+    -webkit-animation: waving2 3 700ms alternate-reverse 1.5s;
+}
+.letter:hover > .letter-low {
+    animation: waving infinite 700ms alternate-reverse;
+    -webkit-animation: waving infinite 700ms alternate-reverse;
+}
+.dino {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 30%;
+    position: relative;
+}
+.dino-pic {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    cursor: grab;
+    animation: waving2 3 700ms alternate 1.5s;
+    -webkit-animation: waving2 3 700ms alternate 1.5s;
+    /* border: red double 2px; */
+    /* display: none; */
+}
+.dino-pic:hover {
+    animation: waving2 infinite 700ms alternate;
+    -webkit-animation: waving2 infinite 700ms alternate;
+}
+img {
+    width: 100%;
+}
+.dino-fact {
+    display: none;
+    background: rgba(204, 102, 153, 0.5); 
+    padding: 10px;
+    font-size: large;
+}
+#playBtn {
+    border: 1px solid black;
+    padding: 5px;
+    padding-left: 8px;
+    background: lightslategray;
+    box-shadow: rgb(53, 53, 53) 5px 3px;
+    margin-bottom: 2px;
+    color: var(--primary);
+}
+#stopBtn {
+    border: 1px solid black;
+    padding: 5px;
+    background: lightslategray;
+    box-shadow: rgb(53, 53, 53) 5px 3px;
+    margin-bottom: 2px;
+    color: var(--secondary);
+}
+.sound {
+    width: 100%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: olivedrab solid 1px; */
+    font-family: Aharoni;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 5%;
+}
+.dino-name {
+    font-size: 290%;
+    cursor: grab;
+    color: var(--secondary);
+    animation: waving2 3 700ms alternate-reverse 1.5s;
+    -webkit-animation: waving2 3 700ms alternate-reverse 1.5s;
+}
+.dino-name:hover {
+    animation: waving2 infinite 700ms alternate;
+    -webkit-animation: waving2 infinite 700ms alternate;
+}
+
+.dino-pron {    
+    cursor: grab;
+    animation: waving2 3 700ms alternate 1.5s;
+    -webkit-animation: waving2 3 700ms alternate 1.5s;
+}
+.dino-pron:hover {
+    animation: waving2 infinite 700ms alternate;
+    -webkit-animation: waving2 infinite 700ms alternate;
+}
+.arrow {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 15%;
+    font-size: 270%;
+    font-weight: 900;
+}
+.arrow:hover {
+    animation: waving infinite 700ms alternate;
+    -webkit-animation: waving infinite 700ms alternate;
+}
+.prev {
+    left: 5%;
+}
+.next {
+    left: 82%;
+}
+a {
+    text-decoration: none; 
+    color: var(--secondary);
+}
+.closebtn {
+    float: right;
+    clear: right;
+    padding-right: 10px;
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
+}
+
+.prim {
+    color: var(--primary);
+    display: inline-block;
+}
+.sec {
+    color: var(--secondary);
+    display: inline-block;
+}
+
+@keyframes waving {
+    /* 0%  {transform: rotate(0deg);} */
+    0% {transform: rotate(-60deg);}
+    50% {transform: rotate(60deg);}
+    /* 100%{transform: rotate(-60deg);} */
+}
+@-webkit-keyframes waving {
+    0% {-webkit-transform: rotate(-60deg);}
+    50% {-webkit-transform: rotate(60deg);}
+    /* 100%{-webkit-transform: rotate(-60deg);} */
+}
+
+@keyframes waving2 {
+    0% {transform: rotate(-10deg);}
+    50% {transform: rotate(10deg);}
+}
+@-webkit-keyframes waving2 {
+    0% {-webkit-transform: rotate(-10deg);}
+    50% {-webkit-transform: rotate(10deg);}
+}
