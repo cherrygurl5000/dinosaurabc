@@ -15,9 +15,9 @@
             background: url(css/abstract-19616_640.jpg) repeat #000;
 		}
 		:root {
-    --primary: yellow;
-    --secondary: #6600CC;
-}
+    		--primary: yellow;
+    		--secondary: #6600CC;
+		}
     </style>
 	
 </head>
@@ -28,16 +28,16 @@
 
 		<div class="navigation">
 			
-			<h2 onclick="showMenu()">&#9776 <span class="menus">Menu</span></h2>
-			<div class="navigation-menu">
+			<h2 id="top" onclick="showMenu('nav-menu')">&#9776 <span class="menus">Menu</span></h2>
+			<div id="nav-menu" class="navigation-menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="dinosaurs.html">Dinosaurs</a></li>
-					<li><a href="categories.html">Categories</a>
-						<ul>
+					<li onclick="showMenu('cat')">Categories</a>
+						<ul id="cat" class="cats">
 							<li><a href="types.html">Type</a></li>
 							<li><a href="diets.html">Diet</a></li>
-							<li><a href="lived.html">When it Lived</a></li>
+							<li><a href="lived.html">Era</a></li>
 							<li><a href="found.html">Found</a></li>
 						</ul>
 					</li>
@@ -45,9 +45,11 @@
 				</ul>
 			<!--End of menu-->
 			</div>
-			<h2 onclick="showMenu()">&#9881</h2>
-			<div class="navigation-settings">
-				Volume: <span class="slider"></span>
+			<h2 id="set" onclick="showMenu('nav-settings')">&#9881</h2>
+			<div id="nav-settings" class="navigation-settings">
+				Volume: <span class="slider" onchange="volumeLevel()">
+					<input type="range" id="vol" step="1"
+				min="0" max="100" value="100"/></span>
 				&#X1F50A;
 			
 			<!--End of settings-->
@@ -56,7 +58,7 @@
 		<!--End of navigation-->
 		</div>
 
-		<div class="letter" onclick="plays('as')">
+		<div id="letters" class="letter" onclick="plays('as')">
 			<div class="letter-up">
 			    A
 			</div>
@@ -70,7 +72,7 @@
 		<!--End of letter-->
 		</div>
 
-		<div class="dino">
+		<div id="dinos" class="dino">
 			<div class="dino-pic" id="dinoPic" onclick="showFacts()">
 			    <img src="pics/apatosaurus.jpg" alt="Apatosaurus Picture" />
 			</div>
@@ -95,7 +97,7 @@
 		<!--End of dino-->
 		</div>.
 
-		<div class="sound">
+		<div id="sounds" class="sound">
 			<div class="sound-name" onclick="plays('sn')">
 				<h1 class="dino-name">Apatosaurus</h1>
 				<audio id="sn">

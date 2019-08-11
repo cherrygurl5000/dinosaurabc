@@ -35,11 +35,26 @@ function hideFacts() {
     stops();  
 }
 
-// function showMenu(menus) {
-//     var change = document.getElementById(menus).style.display;
+function showMenu(menus) {
+    var change = document.getElementById(menus);
+   
+      if(change.style.display == "block")
+          change.style.display = "none";
+     else
+         change.style.display = "block";
+}
 
-//     if(change == "none")
-//         change = "box";
-//     else
-//         change = "none";
-// }
+function closeMenu() {
+    var menus = [];
+    menus[0] = document.getElementById('nav-menu');
+    menus[1] = document.getElementById('cat');
+    menus[2] = document.getElementById('nav-settings');
+
+    for(i=0; i<3; i++) {
+        menus[i].style.display = "none";
+    }
+}
+
+document.getElementById("letters").addEventListener("click", closeMenu);
+document.getElementById("dinos").addEventListener("click", closeMenu);
+document.getElementById("sounds").addEventListener("click", closeMenu);
