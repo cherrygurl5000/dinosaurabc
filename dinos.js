@@ -35,8 +35,11 @@ function hideFacts() {
     stops();  
 }
 
-function showMenu(menus) {
+function showMenu(menus,menus2) {
     var change = document.getElementById(menus);
+    var change2 = document.getElementById(menus2);
+
+    change2.style.display = "none";
    
       if(change.style.display == "block")
           change.style.display = "none";
@@ -58,3 +61,35 @@ function closeMenu() {
 document.getElementById("letters").addEventListener("click", closeMenu);
 document.getElementById("dinos").addEventListener("click", closeMenu);
 document.getElementById("sounds").addEventListener("click", closeMenu);
+
+function volumeLevel() {
+    var vol = document.getElementById("vol");
+    var volumes = vol.value/100;
+
+    var aud = document.getElementsByTagName("AUDIO");
+    var volPic = document.getElementById("volPic");
+
+    for(i=0; i<aud.length; i++) {
+        aud[i].volume = volumes;
+        console.log(aud[i].volume);
+    }
+
+    if(vol.value >= 65)
+        volPic.innerHTML = "&#X1F50A";
+    else if(vol.value > 0)
+        volPic.innerHTML = "&#X1F509";
+    else
+        volPic.innerHTML = "&#X1F507";
+}
+
+function unMute() {
+    var vol = document.getElementById("vol");
+
+    if(vol.value > 0) {
+        vol.value = 0;
+    }
+    else {
+        vol.value = 50;
+    }
+    volumeLevel();
+}

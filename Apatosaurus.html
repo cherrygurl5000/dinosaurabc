@@ -28,7 +28,7 @@
 
 		<div class="navigation">
 			
-			<h2 id="top" onclick="showMenu('nav-menu')">&#9776 <span class="menus">Menu</span></h2>
+			<h2 id="top" onclick="showMenu('nav-menu','nav-settings')">&#9776 <span class="menus">Menu</span></h2>
 			<div id="nav-menu" class="navigation-menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -45,12 +45,12 @@
 				</ul>
 			<!--End of menu-->
 			</div>
-			<h2 id="set" onclick="showMenu('nav-settings')">&#9881</h2>
+			<h2 id="set" onclick="showMenu('nav-settings', 'nav-menu')">&#9881</h2>
 			<div id="nav-settings" class="navigation-settings">
 				Volume: <span class="slider" onchange="volumeLevel()">
 					<input type="range" id="vol" step="1"
 				min="0" max="100" value="100"/></span>
-				&#X1F50A;
+				<span id="volPic" onclick="unMute()">&#X1F50A</span>
 			
 			<!--End of settings-->
 			</div>
