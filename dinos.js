@@ -39,12 +39,14 @@ function showMenu(menus,menus2) {
     var change = document.getElementById(menus);
     var change2 = document.getElementById(menus2);
 
-    change2.style.display = "none";
+    
    
       if(change.style.display == "block")
           change.style.display = "none";
-     else
+     else {
          change.style.display = "block";
+         change2.style.display = "none";
+     }
 }
 
 function closeMenu() {
@@ -93,3 +95,12 @@ function unMute() {
     }
     volumeLevel();
 }
+
+// function lgScreen() {
+//     if(window.matchMedia("(min-width: 1024px)").matches) {
+//         var getMenu =  document.getElementById("top");
+//         getMenu.innerHTML = "Menu";
+//     }
+// }
+
+// lgScreen();
