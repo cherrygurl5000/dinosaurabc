@@ -1,0 +1,26 @@
+{
+  "name": "dinosaurabc",
+  "version": "1.0.0",
+  "description": "\"Package for the Dinosaur AB\u001b[2~Cs site\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherrygurl5000/dinosaurabc.git"
+  },
+  "author": "Stephanie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cherrygurl5000/dinosaurabc/issues"
+  },
+  "homepage": "https://github.com/cherrygurl5000/dinosaurabc#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
+  }
+}

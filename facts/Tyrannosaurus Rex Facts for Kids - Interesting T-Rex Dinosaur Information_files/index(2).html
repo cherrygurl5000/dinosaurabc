@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)https://s0.2mdn.net/3819045/1561797965901/PV_Q3_19_US_EYE_FACT_40_OFF_LENSES_728x90/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>PV_Q3_19_US_EYE_FACT_40_OFF_LENSES_728x90</title>
+		<meta name="ad.size" content="width=728,height=90">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <style>
+	        * { margin:0; padding:0; box-sizing:border-box }
+	        div,a { position:absolute; background-repeat:no-repeat !important }
+	        #loader-container { border:1px solid #333; background:#fff }
+	        #loader { width:31px; height:31px; background:url('img/loading.gif') }
+	        .bannerSize{width:728px; height:90px }
+	        .aCVH{ top:50%; left:50%; -webkit-transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); transform:translate(-50%,-50%) }
+	    </style>
+	<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script><link rel="stylesheet" type="text/css" href="./style.css"></head>
+	<body>
+		<div id="loader-container" class="bannerSize">
+			<div id="loader" class="aCVH"></div>
+		</div>
+	    <div id="banner_content" class="banner bannerSize" style="display: none">
+			<a id="clicktag" class="bannerSize" href="javascript:window.open(window.clickTag),void(0);"></a>
+			<div id="image1" style="transform: matrix(1, 0, 0, 1, 0, -240); opacity: 0;"></div>
+			<div id="image2" class="hide" style="opacity: 0;"></div>
+			<div id="greenPanel1" style="width: 537px; opacity: 0;"></div>
+			<div id="text1" class="hide bannerSize" style="opacity: 0;"></div>
+			<div id="text2" class="hide bannerSize" style="opacity: 0;"></div>
+			<div id="text3" class="hide bannerSize" style="opacity: 0;"></div>
+			<div id="logo" class="bannerSize" style="z-index: 2; transform: matrix(1, 0, 0, 1, 0, -148); opacity: 0;"></div>
+			<div id="fftext1" class="bannerSize" style="opacity: 1; transform: matrix(0.8, 0, 0, 0.8, -185, -6);"></div>
+			<div id="fftext2" class="hide bannerSize" style="opacity: 1;"></div>
+			<div id="fftext3" class="hide bannerSize" style="opacity: 1;"></div>
+			<div id="ffcta" class="hide bannerSize" style="opacity: 1;"></div>
+			<div id="legal" class="hide retina" style="opacity: 1;"></div>
+			<div id="fftextOver"></div>
+			<div id="disclaimer" class="hide retina bannerSize">
+				<div id="close">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348.333 348.334" enable-background="new 0 0 348.333 348.334"><path fill="#656550" d="M336.559,68.611L231.016,174.165l105.543,105.549c15.699,15.705,15.699,41.145,0,56.85c-7.844,7.844-18.128,11.769-28.407,11.769c-10.296,0-20.581-3.919-28.419-11.769L174.167,231.003L68.609,336.563c-7.843,7.844-18.128,11.769-28.416,11.769c-10.285,0-20.563-3.919-28.413-11.769c-15.699-15.698-15.699-41.139,0-56.85l105.54-105.549L11.774,68.611c-15.699-15.699-15.699-41.145,0-56.844c15.696-15.687,41.127-15.687,56.829,0l105.563,105.554L279.721,11.767c15.705-15.687,41.139-15.687,56.832,0C352.258,27.466,352.258,52.912,336.559,68.611z"></path></svg>
+				</div>
+				<div id="disclaimerContainer" class="bannerSize">
+					<div id="disclaimerText" class="retina"></div>
+				</div>
+			</div>
+		</div>
+	<!-- <script src="https://cdn.jsdelivr.net/cutback-js/2.4.0/cutback-stats.min.js"></script> -->
+	<script>
+        var clickTag = "https://www.pearlevision.com/pv-us/eye-care-center-locator";
+    </script>
+	<script src="./TweenMax.min.js.download"></script>
+	<script src="./anim.js.download"></script>
+	
+
+</body></html>

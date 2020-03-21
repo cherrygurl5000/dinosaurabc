@@ -1,0 +1,139 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%
+}
+.banner {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #333;
+    overflow: hidden;
+    background: #fff;
+    display:block !important;
+}
+.hide{
+    opacity:0;
+}
+.retina{
+    background-size:contain !important;
+}
+.aC{
+    right:0;
+    left:0;
+    margin:0 auto;
+}
+#fftextOver {
+    width: 80px;
+    height: 13px;
+    top: 72px;
+    left: 589px;
+    z-index: 132;
+    cursor: pointer;
+}
+#clicktag {
+    cursor: pointer;
+    z-index: 101;
+    background: url('img/clicktag.png');
+}
+#greenPanel1 {
+    background: #62604c;
+    width: 0;
+    height: 75px;
+    bottom: 6px;
+    right: 184px;
+}
+#logo {
+    top: 148px;
+    background: url('img/logo.svg');
+    z-index: 2;
+}
+#image1 {
+    background: url('img/image1.jpg');
+    width: 537px;
+    height: 75px;
+    top: 247px;
+    left: 5px;
+}
+#image2 {
+    background: url('img/image2.jpg');
+    width: 537px;
+    height: 75px;
+    top: 7px;
+    left: 5px;
+}
+#text1 {
+    background: url('img/text1.svg') no-repeat;
+    top: -1px;
+    left: -1px;
+}
+#text2 {
+    background: url('img/text2.svg') no-repeat;
+    top: -1px;
+    left: -1px;
+}
+#text3 {
+    background: url('img/text3.svg');
+    top: -1px;
+    left: -1px;
+    z-index: 5;
+}
+#fftext1 {
+    background: url('img/fftext1.svg');
+    top: -1px;
+    left: -1px;
+    opacity: 0;
+}
+#fftext2 {
+    background: url('img/fftext2.svg') no-repeat;
+    top: -1px;
+    left: -1px;
+}
+#fftext3 {
+    background: url('img/fftext3.svg') no-repeat;
+    top: -1px;
+    left: -1px;
+    cursor: pointer;
+}
+#legal {
+    background: url('img/legal.png') no-repeat;
+    width: 546px;
+    height: 8px;
+    top: 76px;
+    left: 38px;
+}
+#ffcta {
+    background: url('img/cta.svg') no-repeat;
+    top: -1px;
+    left: -1px;
+    z-index: 6;
+}
+#disclaimer {
+    z-index: 124;
+    top: -1px;
+    left: -1px;
+    display: none;
+}
+#disclaimerContainer {
+    background-size: 280px 222px;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#disclaimerText {
+    background: url('img/disclaimer.png') no-repeat;
+    width: 657px;
+    height: 67px;
+    left: 70px;
+    top: 11px;
+}
+#close {
+    width: 13px;
+    height: 13px;
+    z-index: 130;
+    top: 9px;
+    right: 11px;
+    cursor: pointer;
+}

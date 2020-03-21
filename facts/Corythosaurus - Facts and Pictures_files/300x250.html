@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://dco-assets.everestads.net/ics-campaign//5031/t/7075/6/300x250.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Ad</title>
+    <link rel="stylesheet" href="./style.min.css">
+    <script type="text/javascript" src="./AMOLibrary.js.download"></script>
+    <script type="text/javascript" src="./script.min.js.download"></script>
+    <style media="screen">
+      @font-face {
+          font-family: SegoeUI;
+          src: url('fonts/SegoeUI.woff') format("woff");
+      }
+      .segoeUI { font-family: SegoeUI; }
+    </style>
+    <!--
+      Available Classes:-
+        For Images :-
+          .asset        -Image Center Align(Image can shrink according to the container but will expand beyond its original size)
+          .asset-top    -Image Top Center Align(Image can shrink according to the container but will expand beyond its original size)
+          .asset-left
+
+    -->
+    <style media="screen">
+      #ad {
+        width: 300px;
+        height: 250px;
+        font-family: Arial,Helvetica,sans-serif;
+        background-color: #000;
+      }
+      #cta { background-color: #59e6fd; }
+      #cta:hover { background-color: #109ab1; }
+    </style>
+  </head>
+  <body>
+    <div class="" id="ad"><!-- <div id="bg" class="asset" data-image="bg" style="top:0px; left:0px; width:inherit; height:inherit;"></div> --><!-- <div id="ref" class="asset" data-image="ref" style="top:0px; left:0px; width:inherit; height:inherit;"></div> --><div id="logoImage" class="asset" style="top:18px; left:18px; width:122.5px; height:16.5px"><img src="./logo.png"></div><div id="dotImage" class="asset" style="top:19px; left:-18px; width:200px; height:80px;"><img src="./dot-animation.gif"></div><div id="headline" class="text-top-left segoeUI" style="top:82px; left:14px; width:272px; height:115px; font-size:22px; line-height:1.1; letter-spacing:-0.5px; font-weight:bold; color:#FFF;"><span>Scale on demand and deploy machine learning models from cloud to edge</span></div><!-- <div id="headline" class="text-top-left segoeUI" style="top:62px; left:19px; width:270px; height:115px; font-size:19px; line-height:0.9; letter-spacing:0.4px; font-weight:bold; color:#FFF;"><span><font style="display:inline-block;min-height:32px;padding-bottom:8px;">Scale on demand and deploy machine learning models from cloud to edge</font><font style="display:inline-block;font-size:79%;">subHeadline</font></span></div> --><!-- <div id="subHeadline" class="text-left segoeUI" data-style="text-align:left;" data-text="subHeadline" style="top:104px; left:19px; width:270px; height:60px; font-size:15px; letter-spacing:0.2px; line-height:18px; font-weight:bold; color:#FFF;"></div> --><div id="cta" class="text segoeUI" data-style="text-align:center;padding:3px 10px 5px;" style="top:201px; left:17px; min-width:140px; width:auto; max-width:260px; height:30px; font-size:14px; line-height:1; font-weight:bold; color:#000;"><span style="text-align:center;padding:3px 10px 5px;">Try Azure free&nbsp;&nbsp;&nbsp;❯</span></div><div id="overlay" style="top: 0px; left: 0px; width: inherit; height: inherit; background-color: rgb(255, 255, 255); opacity: 0; transition: all 0.5s ease 0s; visibility: hidden;"></div><div class="ad-borders"><div class="ad-border-top" style="position:absolute;display:inline-block;width:300px;border-top:1px solid #000;top:0px;left:0px;"></div><div class="ad-border-right" style="position:absolute;display:inline-block;height:250px;border-left:1px solid #000;top:0px;left:299px;"></div><div class="ad-border-bottom" style="position:absolute;display:inline-block;width:300px;border-top:1px solid #000;top:249px;left:0px;"></div><div class="ad-border-left" style="position:absolute;display:inline-block;height:250px;border-left:1px solid #000;top:0px;left:0px;"></div></div></div>
+    <div id="loadFont" style="width:0;height:0;overflow:hidden;">
+      <div class="segoeUI" style="color:transparent;">segoeUI</div>
+    </div>
+    <script type="text/javascript">
+      var dotAnimationFlag = true;
+      var ad = new Ad({
+        root: document.querySelector('#ad'),
+        width: 300,
+        height: 250,
+        borderWidth: 1,
+        borderColor: '#000'
+      });
+      setTimeout(function() {
+        ad.contentSetup({
+          cam: {
+            headline: "Use your favorite Python environment and machine learning frameworks in <font style='color:#59e6fd;'>Azure</font>",
+            // subHeadline: "Anmeldung für Azure abschließen",
+            ctaText: 'Try Azure free',//"Your $200 credit awaits",
+            clickURL: 'https://www.adobe.com/#MS'
+          },
+          feed: [
+            {
+              name: 'uber',
+              discount_price: 100
+            }
+          ],
+          staticData: {
+            logoImage: 'images/logo.png',
+            dotImage: 'images/dot-animation.gif',
+            // ref:'ref.jpg',
+          },
+          beforeLoad: function(data){
+            var replaceMacro = function(text, data) {
+              var macros = text.match(/\!\{(.*?)\}/g);
+              if(macros) {
+                macros.forEach(function(macro){
+                  var macroText = macro.split('!{').join('').split('}').join('');
+                  for(var key in data) { if(key == macroText) { macroText = data[key]; } }
+                  text = text.split(macro).join(macroText);
+                });
+              }
+              return text;
+            }
+            data.map(function(content){
+              content.ctaText +='&nbsp;&nbsp;&nbsp;&#x276F;';
+            });
+            return data;
+          }
+        }, function(data){
+          var adData = data[0], adClickUrl = adData['clickUrl'];
+          ad.root.addEventListener("click", function(e) {
+            if('button' in e.target.dataset) { } else { amo.onDynAdClick(adData.feedData, "CLICK", adClickUrl); }
+          });
+          var dotAnimation = function(callbackFunction) {
+            if(dotAnimationFlag) {
+              dotAnimationFlag = false;
+              var image = new Image();
+              var imageElement = ad.layers.dotImage.querySelector('img');
+              var imagePath = imageElement.src;
+              // if(imagePath.indexOf('?v')) { imagePath = imagePath.split('?v')[0]; }
+              image.onload = function(){
+                imageElement.src = this.src;
+                setTimeout(function() {
+                  dotAnimationFlag = true;
+                  if(callbackFunction && typeof callbackFunction == 'function') callbackFunction();
+                }, 8130);
+              }
+              image.src = imagePath //+ '?v=' + Math.random();
+            }
+          }
+          ad.root.addEventListener("mouseover", function(e) { dotAnimation(); });
+          dotAnimation(function(){dotAnimation();});
+          ad.layers.cta.style.webkitTransform = '';
+          ad.layers.cta.style.transform = '';
+        });
+      }, 2000);
+    </script>
+  
+
+</body></html>

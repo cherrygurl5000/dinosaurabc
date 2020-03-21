@@ -8,15 +8,24 @@
 
 	<title>Apatosaurus</title>
 
-	<link href="dino.css" rel="stylesheet"/>
+	<link href="css/dino.css" rel="stylesheet"/>
 
     <style>
         body {
-            background: url(css/abstract-19616_640.jpg) repeat #000;
+            background: url(pics/bg/bg76.jpg) repeat #000;
 		}
 		:root {
-    		--primary: yellow;
-    		--secondary: #6600CC;
+    		--primary: purple;
+    		--secondary: #008000;
+		}
+		@media screen and (min-width: 1024px) {
+			.sound {
+				margin-top: 30%;
+			}
+			/* .dino-fact {
+				width: 40%;
+				margin-left: 30%;
+			} */
 		}
     </style>
 	
@@ -28,12 +37,12 @@
 
 		<div class="navigation">
 			
-			<h2 id="top" onclick="showMenu('nav-menu','nav-settings')">&#9776 <span class="menus">Menu</span></h2>
+			<h2 id="top" onclick="showMenu('nav-menu','nav-settings', 'nav-settings')">&#9776 <span class="menus">Menu</span></h2>
 			<div id="nav-menu" class="navigation-menu">
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="dinosaurs.html">Dinosaurs</a></li>
-					<li onclick="showMenu('cat','nav-settings')">Categories</a>
+					<li onclick="showMenu('cat','nav-settings', 'nav-settings')">Categories</a>
 						<ul id="cat" class="cats">
 							<li><a href="types.html">Type</a></li>
 							<li><a href="diets.html">Diet</a></li>
@@ -45,7 +54,7 @@
 				</ul>
 			<!--End of menu-->
 			</div>
-			<h2 id="set" onclick="showMenu('nav-settings', 'nav-menu')">&#9881</h2>
+			<h2 id="set" onclick="showMenu('nav-settings', 'nav-menu', 'cat')">&#9881</h2>
 			<div id="nav-settings" class="navigation-settings">
 				Volume: &nbsp&nbsp&nbsp<span class="slider" onchange="volumeLevel()">
 					<input type="range" id="vol" step="1"
@@ -120,9 +129,9 @@
 	</div>
 
 	<a class="arrow prev" href="Zephyrosaurus.html">Zz</a>
-	<a class="arrow next" href="Brachiosaurus.html">Bb</a>
+	<a class="arrow next" href="Baryonyx.html">Bb</a>
 	
-	<script src="dinos.js"></script>
+	<script src="js/dinos.js"></script>
 </body>
 
 

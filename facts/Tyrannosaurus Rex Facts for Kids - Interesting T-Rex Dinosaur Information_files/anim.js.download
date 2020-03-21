@@ -1,0 +1,88 @@
+var _loadedImages = 0;
+
+_imageArray = new Array('clicktag.png','cta.svg','disclaimer.png','fftext1.svg','fftext2.svg','fftext3.svg','image1.jpg','image2.jpg','legal.png','text1.svg','text2.svg','text3.svg');
+
+this.addEventListener('DOMContentLoaded', preloadImages);
+
+function preloadImages() {
+    for (var i = 0; i < _imageArray.length; i++) {
+        var _tempImage = new Image();
+        _tempImage.addEventListener('load', trackProgress);
+        _tempImage.src = 'img/'+_imageArray[i];
+    }
+}
+
+function trackProgress(){
+    _loadedImages++;
+    if(_loadedImages == _imageArray.length) init();
+}
+
+function init(){
+    var css = document.createElement( 'link' );
+    css.setAttribute( 'rel', 'stylesheet' );
+    css.setAttribute( 'type', 'text/css' );
+    css.setAttribute( 'href', "style.css" );
+    document.getElementsByTagName('head')[0].appendChild(css);
+   initAnimations();
+}
+
+// global vars
+var _tAnim = new TimelineMax(),
+    _p2IO = Power2.easeInOut,
+    _p4IO = Power4.easeInOut,
+    _p4O = Power4.easeOut,
+    _fastTime1 = .25,
+    _fastTime2 = .5,
+    _midTime1 = .75,
+    _midTime2 = 1,
+    _longTime1 = 1.25,
+    _longTime2 = 1.75,
+    _totalTime = 0;
+;
+
+setTimeout(function(){ _totalTime=1; }, 14000);
+document.getElementById("fftextOver").addEventListener("click", function(){
+	if(_totalTime ===1){
+		TweenMax.set("#disclaimer", {opacity: 1, display: "block"});
+	}
+});
+
+document.getElementById("close").addEventListener("click", function(){
+	TweenMax.set("#disclaimer", {opacity: 0, display: "none"});
+});
+
+function initAnimations(){
+    _tAnim
+    	.add("f1")
+		.to("#image1", _midTime2, {y: -240,ease: _p4O})
+		.to("#logo", _fastTime2, {scale:1, y: -148, zIndex:2, ease: _p2IO}, "-="+_midTime2)
+
+		.add("f2")
+		.to("#greenPanel1", _midTime1, {width:283, ease: _p4O})
+		.to("#text1", _fastTime2, { opacity: 1, ease: _p2IO}, "-="+_fastTime1)
+
+		.add("f3")
+		.to("#text1", _fastTime2, { opacity: 0, ease: _p2IO},'+=2' )
+		.to("#image2", _fastTime2, { opacity: 1, ease: _p2IO} )
+		.to("#text2", _fastTime2, { opacity: 1, ease: _p2IO} )
+		.to("#legal1", _fastTime2, { opacity: 1, ease: _p2IO} )
+
+		.add("f4")
+		.to(["#text2","#legal1"], _fastTime2, { opacity: 0, ease: _p2IO},'+=1.8' )
+		.to("#greenPanel1", _midTime1, {width:537, ease: _p4IO})
+		.to("#text3", _fastTime2, { opacity: 1, ease: _p2IO})
+		.set(["#image1","#image2"],{opacity:0})
+		.to(["#text3","#logo","#greenPanel1"], _fastTime2, {opacity:0,ease: _p4IO},'+=1.8' )
+
+		.add("f5")
+    .to("#fftext1", _fastTime2, { opacity:1, ease: _p2IO})
+    .to("#fftext1", _fastTime2, { scale:0.8,x: -185,y:-6, ease: _p2IO,delay:0.5})
+		.to("#ffcta", _fastTime2, { opacity: 1, ease: _p2IO}, "-="+_fastTime1)
+		.to(["#fftext2","#fftext3"], _fastTime2, { opacity: 1, ease: _p2IO}, "-="+_fastTime1)
+    .to("#legal", _fastTime2, {opacity: 1, ease: _p2IO}, "-="+_fastTime1)
+		.to("#fftext4", _fastTime2, { opacity: 1, ease: _p2IO}, "-="+_fastTime1)
+		// stats.setTimeline(_tAnim)
+    // .play(10)
+		time = _tAnim.totalDuration()
+        console.log(time)
+}

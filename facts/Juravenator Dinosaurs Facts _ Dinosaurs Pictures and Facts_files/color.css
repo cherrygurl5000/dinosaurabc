@@ -1,0 +1,236 @@
+body{
+	color: #222222;
+}
+a:hover {
+	color: #0056a2!important;
+}
+
+/*header komponen*/
+
+.site-header ,
+.site-header.header-type-4 .navbar,
+.site-header.header-type-5 .navbar-header {
+	background-color:#ee365d;
+}
+
+
+
+.site-header .site-branding .site-branding-text {
+	color: #222222;
+}
+
+.site-header.header-type-1 .site-menu,
+.site-header.header-type-2 .site-menu {
+	border-top: 1px solid #c8c9cb;;
+	
+}
+
+/* Navbar */
+.navbar-default .navbar-nav > li > a {
+	color:#222;
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+	color: #222;
+	border-color: #0056a2;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+	color: #222;
+	border-bottom: 2px solid #0056a2;
+}
+
+.dropdown-menu > li > a:hover {
+	background-color: #0056a2;
+	color: #ffffff !important;
+}
+
+
+
+/* Site Content */
+.site-content {
+	background-color: #ffffff;
+}
+
+.thumbnail {
+	background-color:#ffffff;
+}
+
+.site-content .content-card .hentry .entry-title a {
+	color: #0056a2;
+	
+}
+.site-content .content-card .hentry .entry-content {
+	color: #222222;
+}
+
+
+.site-content .content-card .hentry .more-link {
+	color: #0056a2;
+	background-color: #ffffff;
+}
+
+.site-content .content-card .hentry .more-link:hover,
+.site-content .content-card .hentry .more-link:active {
+	background-color: #0056a2;
+	color: #ffffff !important;
+	border-color: #0056a2;
+}
+
+.comments-area .comment-author .fn a {
+	color: #0056a2;
+}
+
+.site-content .content-card .hentry .entry-author a {
+	color: #969696;
+}
+.site-content .content-single .hentry .entry-content ul li::before {
+	background-color: #0056a2;
+}
+
+.site-content .content-single .hentry .entry-content ol li::before {
+	color: #0056a2;
+}
+
+
+/*single post*/
+.site-content .single-type-1 .content-single .top-content {
+	background-color: #ffffff;
+}
+
+.breadcrumb a {
+	color: #222222;
+}
+
+.breadcrumb > li + li::before {
+	background-color: #0056a2;
+}
+
+.site-content .content-single .hentry .entry-title {
+	color: #0056a2;
+	
+}
+
+.panel-default > .panel-heading .icon {
+	color: #0056a2;
+}
+
+
+
+/*pagination*/
+.pagination .nav-links .page-numbers:hover,
+.pagination .nav-links .page-numbers.current
+ {
+	background-color: #0056a2;
+	color: #ffffff !important;
+}
+
+.pagination .nav-links .page-numbers.next,
+.pagination .nav-links .page-numbers.prev {
+	color:  #0056a2;
+}
+
+/*sidebar*/
+
+.sidebar .widget,
+.attachment .widget {
+	background-color: #ffffff;
+}
+
+.sidebar .widget .widget-title,
+.attachment .widget .widget-title {
+	color: #f2d9ff;
+	background-color: #222;
+}
+
+
+.sidebar .widget a {
+	color: #222222;
+}
+
+.sidebar .widget.widget_categories ul li a,
+.sidebar .widget.widget_categories ul li .count {
+	color: #222222;
+}
+
+.sidebar .widget.widget_recent_entries ul li::before {
+	background-color: #0056a2;
+}
+.sidebar .widget.widget_tag_cloud .tagcloud a:hover {
+	color: #fff !important;
+	background-color: #0056a2;
+}
+
+
+
+/*button*/
+.btn-orange { 
+	color: #ffffff; 
+	background-color: #0056a2; 
+	border-color: #0056a2; 
+} 
+ 
+.btn-orange:hover, 
+.btn-orange:focus, 
+.btn-orange:active, 
+.btn-orange.active, 
+.open .dropdown-toggle.btn-orange { 
+	color: #ffffff !important; 
+	background-color: #000000; 
+	border-color: #0056a2; 
+} 
+ 
+
+/*comment*/
+.comments-area .reply a {
+	color: #0056a2;
+}
+.comments-area .comment-body {
+	
+	background-color: #fff;
+	border: 1px solid #f1f3f5;
+}
+
+
+.comment-respond textarea:focus,
+.comment-respond textarea:active {
+	border: 1px solid #0056a2;
+}
+
+.comment-respond textarea:focus,
+.comment-respond input[type="text"]:focus,
+.comment-respond textarea:active,
+.comment-respond input[type="text"]:active,
+.form-control:focus,
+.form-control:active {
+	border-bottom: 1px solid #0056a2;
+}
+
+
+
+/*footer color*/
+
+.site-footer,
+.site-footer a,
+.site-footer .footer-type-1 .widget ul.social-media li a,
+.site-footer .footer-type-3 .footer-top a,
+.site-footer .footer-type-1 .widget ul.social-media li a:hover {
+	color: #cacaca;
+}
+
+.site-footer .footer-type-3 .footer-top-menu ul.menu li::after {
+	background-color: #cacaca;
+}
+.site-footer .footer-bottom {
+	background-color: #fff;
+	border-top: 1px solid #5b5b5b;
+}
+
+.site-footer .footer-type-1 .widget ul.social-media li a:hover {
+	background-color: #fff;
+}
+.site-footer .footer-type-1 .footer-top,
+.site-footer .footer-type-3 .footer-top {
+	background-color: #fff;
+}

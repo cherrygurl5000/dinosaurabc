@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://s0.2mdn.net/4601119/1555452643320/300x600/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>300x600</title><meta name="ad.size" content="width=300,height=600"><script async="" src="./TweenMax.min.js.download" integrity="sha256-ABrLsV2caVEMCBfm3eNhv/CYQG+tGCqzw2f4b/Pag0M=" crossorigin="anonymous"></script><script>var clickTag = "https://us.etrade.com/what-we-offer/our-accounts/core-portfolios";</script><link rel="stylesheet" type="text/css" href="./main.css"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script></head><body><div id="container" style="width: 300px; height: 600px; visibility: inherit; opacity: 1;"><a href="javascript:void(window.open(window.clickTag))"><div id="bg" class="sprite"></div><div id="cake" class="sprite retina_container"></div><div id="cover2" class="sprite" style="height: 0px;"></div><div class="sprite retina_container"><div id="copy_ef_c" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy_ef_b" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy_ef_a" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy3c" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy3b" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy3a" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy1c" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy1b" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div><div id="copy1a" class="sprite" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, -150);"></div></div><div id="green_box" class="sprite"></div><div id="cover" class="sprite" style="height: 0px;"></div><div id="copy_holder" class="sprite retina_container" style="height: 806px;"><div id="copy2c" class="sprite" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div><div id="copy2b" class="sprite" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div><div id="copy2a" class="sprite" style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div></div><div class="sprite retina_container"><div id="logo" class="sprite"></div><div id="legal" class="sprite"></div></div><div id="cta_container" class="sprite" style="visibility: inherit; opacity: 1;"><div id="cta" class="sprite" style="background-image: none; height: 45px; width: 178px; transform-origin: center center 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><svg id="CTA_SPACE" data-name="CTA SPACE" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 26"><defs><style>.cls-1 {
+                            fill: #f4f5ea;
+                          }
+
+                          .cls-2 {
+                            fill: #794cdc;
+                          }</style></defs><title>cta2</title><rect id="BOX" class="cls-1" width="98" height="26" rx="6" ry="6"></rect><path id="OPEN_AN_ACCOUNT" data-name="OPEN AN ACCOUNT" class="cls-2" d="M187.71,213.28c0-1.91.89-2.88,2.79-2.88s2.78,1,2.78,2.89-.9,2.89-2.8,2.89S187.71,215.2,187.71,213.28Zm1.6,0c0,1.15.4,1.58,1.17,1.58s1.17-.42,1.17-1.6-.39-1.57-1.16-1.57-1.18.41-1.18,1.6Zm5,2.76h1.6v-1.47h1a1.92,1.92,0,0,0,2.16-2,1.85,1.85,0,0,0-2-2.06h-2.81v5.54Zm2.5-4.2a.65.65,0,0,1,.7.7.66.66,0,0,1-.56.75h-1v-1.45h.91Zm3.15,4.2h4.45v-1.23h-2.9v-.94h2.42v-1.24h-2.42v-.89h2.82v-1.23H200v5.54Zm9.3,0h1.33v-5.54h-1.5l0,3.28-2.51-3.28h-1.18v5.54h1.5l0-3Zm7.88,0h1.63l-1.84-5.54H215l-1.84,5.54h1.58l.22-.74h1.93Zm-1.19-4,.62,2h-1.23Zm7.36,4h1.34v-5.54h-1.5l0,3.28-2.51-3.28H219.5v5.54H221l0-3Zm7.88,0h1.63L231,210.52h-1.91l-1.84,5.54h1.58l.22-.74H231Zm-1.2-4,.62,2h-1.24Zm5.87,4.09a2.34,2.34,0,0,0,2.4-1.39l-1.3-.59a1,1,0,0,1-1.05.71c-.76,0-1.19-.38-1.19-1.59s.43-1.6,1.18-1.6a1,1,0,0,1,1,.66l1.28-.62a2.15,2.15,0,0,0-2.29-1.35c-1.87,0-2.81.89-2.81,2.88s.86,2.9,2.74,2.9Zm5.65,0a2.34,2.34,0,0,0,2.4-1.39l-1.3-.59a1,1,0,0,1-1.05.71c-.76,0-1.19-.38-1.19-1.59s.43-1.6,1.18-1.6a1,1,0,0,1,1,.66l1.28-.62a2.15,2.15,0,0,0-2.29-1.35c-1.87,0-2.81.89-2.81,2.88s.87,2.9,2.75,2.9Zm2.9-2.89c0-1.91.89-2.88,2.79-2.88s2.78,1,2.78,2.89-.9,2.89-2.8,2.89-2.78-1-2.78-2.89Zm1.6,0c0,1.15.4,1.58,1.17,1.58s1.17-.42,1.17-1.6-.39-1.57-1.16-1.57-1.18.41-1.18,1.6Zm8.38.55a1,1,0,1,1-1.92,0v-3.33h-1.59v3.24c0,1.71.9,2.41,2.56,2.41s2.54-.66,2.54-2.41v-3.24H254.4Zm6.61,2.21h1.35v-5.54h-1.5l0,3.28-2.51-3.28h-1.19v5.54h1.5l0-3Zm2.13-5.54v1.34h1.64v4.19h1.59v-4.19H268v-1.34h-4.86Z" transform="translate(-179 -200)"></path></svg></div></div><div id="border_top" class="sprite" style="width: 300px;"></div><div id="border_right" class="sprite" style="height: 600px;"></div><div id="border_left" class="sprite" style="height: 600px;"></div><div id="border_bottom" class="sprite" style="width: 300px;"></div></a></div><script type="text/javascript" src="./main.js.download"></script><script type="text/javascript">window.onload = function(){
+        window.setTimeout(function() { init(); }, 1000);
+    }</script></body></html>
